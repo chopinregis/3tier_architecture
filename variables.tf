@@ -31,3 +31,13 @@ variable "admin_password" {
   type        = string
   description = "The password for the administrator account"
 }
+
+variable "administrator_login" {
+  type        = string
+  description = "The username for the administrator of the database accouunt"
+}
+
+variable "administrator_login_password" {
+  type       = string
+  description = "The password for the administrator of the databse accouutn"
+}
