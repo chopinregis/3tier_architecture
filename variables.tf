@@ -17,3 +17,17 @@ variable "tenant_id" {
   type        = string
   description = "The Tenant ID for the Azure service principal"
 }
+
+//
+//
+
+
+variable "admin_username" {
+  type        = string
+  description = "The username for the administrator account"
+}
+
+variable "admin_password" {
+  type        = string
+  description = "The password for the administrator account"
+}
