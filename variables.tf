@@ -56,3 +56,48 @@ variable "administrator_login" {
   type        = string
   // You can add a default value or keep it without a default so it must be provided
 }
+
+//
+//
+
+variable "vnet_name" {
+  type        = string
+  description = "Name for the virtual network."
+  default     = "myVNet"
+}
+
+variable "vnet_address_space" {
+  type        = list(string)
+  description = "Address space for the virtual network."
+  default     = ["10.0.0.0/16"]
+}
+
+variable "subnet_names" {
+  type        = map(string)
+  description = "Names of the subnets."
+  default     = {
+    web = "web-subnet"
+    app = "app-subnet"
+    db  = "db-subnet"
+  }
+}
+
+variable "subnet_prefixes" {
+  type        = map(string)
+  description = "CIDR prefixes for each subnet."
+  default     = {
+    web = "10.0.1.0/24"
+    app = "10.0.2.0/24"
+    db  = "10.0.3.0/24"
+  }
+}
+
+variable "nsg_names" {
+  type        = map(string)
+  description = "Names of the network security groups."
+  default     = {
+    web = "web-nsg"
+    app = "app-nsg"
+    db  = "db-nsg"
+  }
+}
