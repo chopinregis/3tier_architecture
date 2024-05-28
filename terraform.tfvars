@@ -4,5 +4,5 @@
 //administrator_login            = "mysqladmin"
 //administrator_login_password   = "Password1234!"
 
-db_admin_username = "desired_username"
-db_admin_password = "desired_password"
+//db_admin_username = "desired_username"
+//db_admin_password = "desired_password"
