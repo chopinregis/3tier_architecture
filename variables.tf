@@ -24,6 +24,7 @@ variable "admin_password" {
   description = "The admin password"
   type        = string
   // Add a default value or leave it without to require a value be provided
+  sensitive   = true
 }
 
 variable "admin_username" {
