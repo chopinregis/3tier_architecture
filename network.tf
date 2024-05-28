@@ -30,19 +30,19 @@ resource "azurerm_subnet" "db" {
 
 # Network Security Groups
 resource "azurerm_network_security_group" "web_nsg" {
-  name                = "web-nsg"
+  name                = var.nsg_names["web"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 }
 
 resource "azurerm_network_security_group" "app_nsg" {
-  name                = "app-nsg"
+  name                = var.nsg_names["app"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 }
 
 resource "azurerm_network_security_group" "db_nsg" {
-  name                = "db-nsg"
+  name                = var.nsg_names["db"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 }
