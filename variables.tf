@@ -20,7 +20,17 @@ variable "tenant_id" {
 
 //
 //
+variable "admin_password" {
+  description = "The admin password"
+  type        = string
+  // Add a default value or leave it without to require a value be provided
+}
 
+variable "admin_username" {
+  description = "The admin username"
+  type        = string
+  // Add a default value or leave it without to require a value be provided
+}
 
 variable "db_admin_username" {
   type        = string
