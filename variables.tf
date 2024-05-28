@@ -22,16 +22,6 @@ variable "tenant_id" {
 //
 
 
-variable "admin_username" {
-  type        = string
-  description = "The username for the administrator account"
-}
-
-variable "admin_password" {
-  type        = string
-  description = "The password for the administrator account"
-}
-
 variable "db_admin_username" {
   type        = string
   description = "The username for the administrator of the database accouunt"
