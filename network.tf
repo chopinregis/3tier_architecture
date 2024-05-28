@@ -1,31 +1,31 @@
 # Virtual Network
 resource "azurerm_virtual_network" "vnet" {
-  name                = "myVNet"
-  address_space       = ["10.0.0.0/16"]
+  name                = var.vnet_name
+  address_space       = var.vnet_address_space
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 }
 
 # Subnets
 resource "azurerm_subnet" "web" {
-  name                 = "web-subnet"
+  name                 = var.subnet_names["web"]
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes     = ["10.0.1.0/24"]
+  address_prefixes     = [var.subnet_prefixes["web"]]
 }
 
 resource "azurerm_subnet" "app" {
-  name                 = "app-subnet"
+  name                 = var.subnet_names["app"]
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes     = ["10.0.2.0/24"]
+  address_prefixes     = [var.subnet_prefixes["app"]]
 }
 
 resource "azurerm_subnet" "db" {
-  name                 = "db-subnet"
+  name                 = var.subnet_names["db"]
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes     = ["10.0.3.0/24"]
+  address_prefixes     = [var.subnet_prefixes["db"]]
 }
 
 # Network Security Groups
