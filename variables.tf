@@ -40,12 +40,14 @@ variable "db_admin_username" {
 variable "db_admin_password" {
   type       = string
   description = "The password for the administrator of the databse accouutn"
+  sensitive   = true
 }
 
 variable "administrator_login_password" {
   description = "The password for the database administrator"
   type        = string
   // You can add a default value or keep it without a default so it must be provided
+  sensitive   = true
 }
 
 variable "administrator_login" {
