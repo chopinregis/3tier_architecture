@@ -41,3 +41,15 @@ variable "db_admin_password" {
   type       = string
   description = "The password for the administrator of the databse accouutn"
 }
+
+variable "administrator_login_password" {
+  description = "The password for the database administrator"
+  type        = string
+  // You can add a default value or keep it without a default so it must be provided
+}
+
+variable "administrator_login" {
+  description = "The login name for the database administrator"
+  type        = string
+  // You can add a default value or keep it without a default so it must be provided
+}
