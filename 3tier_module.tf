@@ -1,6 +1,6 @@
 module "three_tier_app" {
   source              = "./module3tierarchitecture/"
-  resource_group_name = "mcitthreetiermodule"
+  resource_group_name = "Mcit-3tier-terraformrg"
   location            = "West Europe"
   admin_username      = var.administrator_login
   admin_password      = var.administrator_login_password
