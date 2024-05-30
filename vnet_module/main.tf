@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "example" {
-  name     = "example-resources"
-  location = "West Europe"
+  name     = var.resource_group_name
+  location = var.location
 }
 
 resource "azurerm_network_security_group" "example" {
